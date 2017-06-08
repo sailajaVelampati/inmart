@@ -1,0 +1,40 @@
+<html>
+    <head>
+    </head>
+    <body>
+    <script>
+        //delete is used to delete a property from an object - return a boolen value 
+        /*
+        true - deteles the exisiting object;
+            - even if object does'nt exists;
+            
+        false- coudnt delete*/
+        
+        //cannot delet the variable declare with var unless in eval
+        
+        var a =2;
+        b=4
+        console.log(delete a);
+        console.log(delete b);
+        console.log(delete c);
+        console.log(  a);
+        //console.log(  b);
+         
+        eval('var a = "cat";' +
+        
+        'console.log(window.a);' +  // prints "cat"
+        
+        'console.log(delete a);' +  // prints true (?!)
+        
+        'console.log(window.a);' );  // prints undefined
+    
+
+        // cannot delete  object, datatypes
+        var a = {a:1,g:4}
+        console.log(delete window);                 // prints false
+        console.log(delete undefined);              // prints false
+        console.log(delete [].length);              // prints false
+        console.log(delete a);
+    </script>
+    </body>
+</html>
