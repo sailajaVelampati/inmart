@@ -1,0 +1,21 @@
+<html>
+    <head>
+    
+    </head>
+    <body>
+        <script>
+            /*in javascript variable and function declaration are moved to the top of the scope - hoisting */
+                foo();
+            function foo() {
+                console.log('can make a function call above the function')
+            }
+
+            // versus
+            foo1() //this will give foo1 is not a function error as varble declarations are moved to the top not the intialisations.
+            var foo1 = function() {
+                console.log('hoisting error');
+            };
+            foo1()//this will work
+        </script>
+    </body>
+</html>

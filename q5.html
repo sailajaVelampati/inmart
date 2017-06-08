@@ -1,0 +1,54 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+        for (var i = 0; i < 5; i++) {
+
+            var btn = document.createElement('button');
+
+            btn.appendChild(document.createTextNode('Button ' + i));
+
+            btn.addEventListener('click', function(){ console.log(i); });
+
+            document.body.appendChild(btn);
+        }
+        </script>
+        <br>
+        <p>Button with input type</p>
+        <br>
+        <script>
+                var buttonsToCreate = ['Button 0','Button 1','Button 2','Button 3','Button 4'];
+                 for (var i = 0; i < buttonsToCreate.length; i++) {
+                  var newButton = document.createElement('input');
+                  newButton.type = 'button';
+                  newButton.value = buttonsToCreate[i];
+                  //newButton.id = buttonsToCreate[i];
+                  newButton.onclick = function () {
+                    console.log(i);
+                  };
+                  document.body.appendChild(newButton);
+                }
+         </script>
+        <br>
+        <p>Button print respective console log value</p>
+        <br>
+        <script>
+            /*
+            What gets logged to the console when the user clicks on “Button 4” and why?
+            A:console log prints 5, the loop 5 successfull itterations (0-4), after which i is incremented to 5 and the condition fails; when the 'button 4' or any other button current value of i which is 5 is printed.
+            */
+            /*Provide one or more alternate implementations that will work as expected.?
+             if the expectation id button 0 prints 0;button 1 prints 1;button 2 prints 2; button 3 prints 3; button 4 prints 4;*/ 
+            for (var i = 0; i < 5; i++) {
+
+            var btn = document.createElement('button');
+                btn.setAttribute('value',i);
+                btn.appendChild(document.createTextNode('Button ' + i));                
+                btn.addEventListener('click', function(e){ console.log(e.currentTarget.getAttribute("value")); });
+
+                document.body.appendChild(btn);
+            }
+        </script>
+    </body>
+</html>

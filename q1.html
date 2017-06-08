@@ -1,0 +1,20 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+        /*if (typeof bar === 'object')
+            statment is true if bar is object, null, array.
+            */
+            var bar = null;
+            if(typeof(bar) === 'object') console.log('bar : '+bar);
+            bar = {};
+            if(typeof(bar) === 'object') console.log('bar : '+bar);
+            // to check if bar id object 
+            if(bar !== null && typeof(bar) === 'object' ) console.log('bar is an object and it is not null');
+            //or
+            if(bar.constructor === Object) console.log('bar is an object');
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            var urls =["http://daily-javascript.net/2015/04/27/joqular-angular-atomic-notify/","http://daily-javascript.net/2015/04/24/react-markdown-editor-react-tagsinput/","http://daily-javascript.net/2015/04/23/migrating-dailyjs-to-ghost/"];
+                 var domain = "dailyjs.com"
+
+                 function setUrlsDomain(urls,domain) {
+                    var temp = []
+                    for(var i=0;i<urls.length;i++){
+                        temp.push('http://'+domain+urls[i].split('.net')[1]);
+                    }
+                     return temp;
+                 }
+
+                var newUrls = setUrlsDomain(urls,domain);
+                console.log(newUrls);
+                // urls =["http://dailyjs.com/2015/04/27/joqular-angular-atomic-notify/","http://dailyjs.com/2015/04/24/react-markdown-editor-react-tagsinput/","http://dailyjs.com/2015/04/23/migrating-dailyjs-to-ghost/"];
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            (function(){
+                
+                var a = b = 3; // b is a global variable and a is local variable b=3;var a=3;
+
+                })();
+
+                console.log("a defined? " + (typeof a !== 'undefined'));
+
+                console.log("b defined? " + (typeof b !== 'undefined'));
+        </script>
+    </body>
+</html>

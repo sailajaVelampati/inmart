@@ -1,0 +1,34 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            // this - own the js 
+            var myObject = {
+
+            foo: "bar",
+
+            func: function() {
+                // this here owns the object - returns myObject
+            var self = this; 
+
+            console.log("outer func: this.foo = " + this.foo);
+
+            console.log("outer func: self.foo = " + self.foo);
+
+            (function() {
+                // this here owns the function - returns window object
+            console.log("inner func: this.foo = " + this.foo);//this.myObject.foo 
+
+            console.log("inner func: self.foo = " + self.foo);
+
+            }());
+
+            }
+
+            };
+            
+            myObject.func();
+        </script>
+    </body>
+</html>
